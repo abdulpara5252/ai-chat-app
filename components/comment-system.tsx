@@ -16,13 +16,11 @@ export function CommentSystem({ questionId }: CommentSystemProps) {
   const [newComment, setNewComment] = useState('');
   const [sortBy, setSortBy] = useState<SortOption>('newest');
 
-  // Load comments from localStorage
   useEffect(() => {
     const stored = localStorage.getItem(`comments-${questionId}`);
     if (stored) {
       const parsed = JSON.parse(stored);
-      // Convert date strings back to Date objects
-      const commentsWithDates = parsed.map((c: any) => ({
+      const commentsWithDates = parsed.map((c: Comment) => ({
         ...c,
         createdAt: new Date(c.createdAt),
         updatedAt: new Date(c.updatedAt),
