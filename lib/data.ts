@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface Question {
   id: number;
   question: string;
@@ -32,7 +34,7 @@ function transformPostToQuestion(post: JSONPlaceholderPost): Question {
     'Data Science', 'Cloud Computing', 'Cybersecurity', 'Neural Networks',
     'Natural Language Processing', 'Computer Vision', 'Robotics', 'Internet of Things',
     'Web Development', 'Mobile Development', 'Database Management', 'Software Engineering',
-    'DevOps', 'Microservices', 'API Design', 'Version Control'
+    'DevOps', 'Microservices', 'API Design', 'Version Control','Javascript','python','React'
   ];
   
   const questionTemplates = [
