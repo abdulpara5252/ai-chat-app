@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from 'react';
 import { Card } from '@/components/ui/card';
 import { CommentSystem } from '@/components/comment-system';
 import { ChatMessage } from '@/lib/types';
-import { cn } from '@/lib/utils';
 
 interface ChatInterfaceProps {
   messages: ChatMessage[];
